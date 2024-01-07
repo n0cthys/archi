@@ -8,7 +8,7 @@ client = berserk.Client()
 session = berserk.TokenSession(token)
 client = berserk.Client(session)
 
-gms = client.games.export_by_player(username="Nocthys")
+gms = client.games.export_by_player(username="Nocthys", as_pgn=True)
 games = ' '.join([str(elem) for elem in list(gms)])
 
 with open(file_path, "w") as file:
